@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1584816593 source:c:\users\Настя\desktop\ctasks\task06\main.c
+	<stdio.h>
+	<stdlib.h>
+	<time.h>
+
