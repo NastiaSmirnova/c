@@ -25,6 +25,7 @@ int main()
     scanf("%c",&k);
     scanf("%s",l);
     printf("%d", str_chr (l,k));
+    free(l);
     return 0;
 }
 

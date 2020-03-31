@@ -29,6 +29,7 @@ int main()
     l = malloc(360*sizeof(char));
     scanf("%s",l);
     printf("%d",fatoi (l));
+    free(l);
 
     return 0;
 }

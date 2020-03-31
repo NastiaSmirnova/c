@@ -26,12 +26,17 @@ int main()
 {
     char *k;
     char *l;
+    char *us;
     l = malloc(360*sizeof(char));
 
     k = malloc(360*sizeof(char));
 
     scanf("%s",k);
     scanf("%s",l);
-    printf("%s",unite_string(k,l));
+    us=unite_string(k,l);
+    printf("%s",us);
+    free(l);
+    free(k);
+    free(us);
     return 0;
 }

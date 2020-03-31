@@ -24,9 +24,13 @@ char* double_string (char* x)
 int main()
 {
     char *k;
+    char *dk;
 
     k = malloc(360*sizeof(char));
     scanf("%s",k);
-    printf("%s",double_string(k));
+    dk=double_string(k);
+    printf("%s",dk);
+    free(k);
+    free(dk);
     return 0;
 }
