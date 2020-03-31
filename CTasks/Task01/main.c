@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #define N 10
 #include <time.h>
-int min_index(int a[N])
+int min_index(int a[N]) // функция нахождения инднкса минимального элемента
 {
     int min = a[0];
     int min_id=0;
@@ -18,7 +18,7 @@ int min_index(int a[N])
 
     return min_id;
 }
-int max_index(int a[N])
+int max_index(int a[N]) //функция нахождения индекса максимального элемента
 {
     int max = a[0];
     int max_id=0;
