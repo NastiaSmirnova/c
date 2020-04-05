@@ -126,6 +126,7 @@ int main(){
                 break;
             }
             case 7:
+                delete_all(start);
                 exit(0);
         }
 	}
