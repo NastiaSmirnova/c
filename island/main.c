@@ -87,17 +87,21 @@ int main(){
 	while (1) {
         print_menu();
         int option_num;
-        scanf("%d", &option_num);
+        char num_string[20];
+        fgets(num_string, sizeof(num_string), stdin);
+        sscanf(num_string, "%d\n", &option_num);
         switch (option_num) {
             case 1: {
                 printf("Enter name:\n");
-                scanf("%s",name);
+                fgets(name, sizeof(name), stdin);
+                sscanf(name, "%s\n", name);
                 start = create_start(name);
                 break;
             }
             case 2: {
                 printf("Enter name:\n");
-                scanf("%s",name);
+                fgets(name, sizeof(name), stdin);
+                sscanf(name, "%s\n", name);
                 append(start, name);
                 break;
             }
@@ -115,19 +119,24 @@ int main(){
             }
             case 6: {
                 printf("Enter name:\n");
-                scanf("%s",name);
+                fgets(name, sizeof(name), stdin);
+                sscanf(name, "%s\n", name);
                 item *res = search(start, name);
                 if (res != NULL) {
-                    printf("Found %s", res->name);
+                    printf("Found %s\n", res->name);
                 }
                 else {
-                    printf("Not found");
+                    printf("Not found\n");
                 }
                 break;
             }
-            case 7:
+            case 7: {
                 delete_all(start);
                 exit(0);
+            }
+            default: {
+                printf("Wrong option number\n");
+            }
         }
 	}
     delete_all(start);
